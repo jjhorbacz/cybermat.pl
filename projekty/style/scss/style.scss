@@ -1,0 +1,294 @@
+//zmienne
+$wysHeader: 220px;
+
+//globalne
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+ul {
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+//header
+header {
+    .wrapper {
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        height: 220px;
+        background-color: #000;
+
+        .sinusWrapper {
+            height: $wysHeader;
+            width: 100%;
+            position: absolute;
+
+            #sinus1 {
+                color: #FFF;
+                width: 100%;
+                height: $wysHeader;
+
+                .aplitudeWrapper {
+
+                    #line1 {
+                        stroke-width: 1;
+                        stroke: #3c3c3c;
+                        display: none;
+                    }
+
+                    #wave1 {
+                        fill: none;
+                        stroke-width: 4;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke: #fff;
+                    }
+                }
+            }
+
+        }
+
+        .thunder {
+            position: absolute;
+            background-image: url("../../pics/lighting.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: $wysHeader;
+            opacity: 0;
+        }
+
+        .thunder {
+            animation-name: thunder-effect;
+            animation-timing-function: ease;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            /*   animation-delay: 1s; */
+        }
+
+        @keyframes thunder-effect {
+
+            0%,
+            25%,
+            35%,
+            69%,
+            85%,
+            100% {
+                opacity: 0;
+            }
+
+            30%,
+            70%,
+            90%,
+            95% {
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            height: $wysHeader;
+            width: 100%;
+
+            #logo1 {
+                margin: 0 auto;
+                padding: 20px 0;
+                display: block;
+                height: 220px;
+                z-index: 99999;
+                position: relative;
+            }
+
+        }
+
+
+        .navigation {
+            border-right: 2px;
+            border-left: 2px;
+            background-color: #FFF;
+            margin: 30px 0;
+
+            ul {
+                text-align: center;
+                margin-bottom: 0;
+                margin: 2px 0;
+
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    margin: 10px 0;
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        color: #000;
+                        text-transform: uppercase;
+                        padding: 5px 10px;
+                        transition: background .2s linear;
+
+                        &:hover {
+                            background-color: #605081;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+//strona glowna
+#parallaxBack {
+    width: 100%;
+    height: 100vh;
+    background: url("../../pics/space.webp");
+    z-index: -1;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.pasek {
+    margin-top: 48px;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #logo {
+        margin: 0 auto;
+        padding: 20px 0;
+        display: block;
+        height: 75%;
+        z-index: 99999;
+        position: relative;
+    }
+
+    .przesunPasek {
+        list-style-type: none;
+        margin: 0;
+        width: 800px;
+        height: 180px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: #FFF;
+        border-radius: 60%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 51% 90px;
+
+        li {
+            display: none;
+
+            a {
+                text-align: center;
+                color: #000;
+
+            }
+
+            p {
+                text-align: center;
+                width: 100%;
+                color: #000;
+                margin-bottom: 0;
+                text-transform: uppercase;
+            }
+
+            .autor {
+                margin-bottom: 0;
+                padding-left: 6vw;
+                font-style: oblique;
+                margin-top: 3px;
+                text-transform: none;
+            }
+        }
+    }
+
+}
+
+.bodyWrapper {
+    background-color: #FFF;
+
+
+
+    .leftLoop {
+        display: inline-block;
+        height: 80px;
+        width: 100vw;
+        position: relative;
+        font-size: 10px;
+        overflow: hidden;
+        border-right: 2px;
+        border-left: 2px;
+        background-color: #000;
+        margin: 30px 0;
+
+        .loopWrapper {
+            position: absolute;
+            height: 100%;
+            width: 400%;
+            margin-top: 0;
+            transform: translateX(100vw);
+            animation: leftcrawl 20s linear infinite;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+
+            span {
+                font-size: 2em;
+                margin-right: 10px;
+                color: #FFF;
+            }
+        }
+    }
+
+    #my-projects {
+        margin-top: 2em;
+        margin-bottom: 2em;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+
+    @keyframes leftcrawl {
+        to {
+            transform: translateX(-100vw);
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 757px) {
+    .pasek {
+        height: 60px;
+        background: #F9D7D6;
+
+        .przesun_pasek_d {
+            padding: 10px;
+        }
+    }
+}
