@@ -1,0 +1,12 @@
+# Wordpress
+/wp-admin/
+/wp-content/
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+
+# Wiki
+/wiki
+/w
