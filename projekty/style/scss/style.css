@@ -206,7 +206,7 @@ header .wrapper .navigation ul li a:hover {
 .bodyWrapper .leftLoop {
   display: inline-block;
   height: 80px;
-  width: 100vw;
+  width: 100%;
   position: relative;
   font-size: 10px;
   overflow: hidden;
@@ -241,9 +241,6 @@ header .wrapper .navigation ul li a:hover {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-.bodyWrapper #my-projects h2 {
-  text-align: center;
-}
 @-webkit-keyframes leftcrawl {
   to {
     -webkit-transform: translateX(-100vw);
@@ -257,8 +254,51 @@ header .wrapper .navigation ul li a:hover {
   }
 }
 
+.projekty {
+  background-color: #FFF;
+  padding-top: 2em;
+  padding-bottom: 5em;
+}
+.projekty #my-projects {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.projekty #my-projects h2 {
+  text-align: center;
+}
+.projekty #my-projects .projectsWrapper {
+  padding-top: 2em;
+}
+.projekty #my-projects .projectsWrapper .oneOfProjects {
+  border: #000 solid 2px;
+  border-radius: 15px;
+  padding: 15px;
+}
+.projekty #my-projects .projectsWrapper .oneOfProjects h2,
+.projekty #my-projects .projectsWrapper .oneOfProjects h3 {
+  text-align: left;
+}
+.projekty #my-projects .projectsWrapper .oneOfProjects h3 {
+  font-size: 1.2em;
+}
+.projekty #my-projects .projectsWrapper .oneOfProjects img {
+  height: 150px;
+}
+
 footer {
-  background-color: #000;
+  background-color: #FFF;
+  color: #224DBE;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active {
+  text-decoration: none;
+  color: #224DBE;
 }
 
 @media screen and (min-width: 0px) and (max-width: 757px) {
