@@ -257,6 +257,10 @@ header .wrapper .navigation ul li a:hover {
   }
 }
 
+footer {
+  background-color: #000;
+}
+
 @media screen and (min-width: 0px) and (max-width: 757px) {
   .pasek {
     height: 60px;
