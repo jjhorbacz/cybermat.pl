@@ -281,6 +281,10 @@ header .wrapper .navigation ul li a:hover {
   height: 150px;
   margin-bottom: 15px;
 }
+.projekty #my-projects .projectsWrapper .oneOfProjects .techImages img {
+  height: 25px;
+  padding-right: 5px;
+}
 
 footer {
   background-color: #FFF;
