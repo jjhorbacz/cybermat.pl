@@ -139,9 +139,11 @@ header {
                         text-transform: uppercase;
                         padding: 5px 10px;
                         transition: background .2s linear;
+                        font-weight: bold;
 
                         &:hover {
-                            background-color: #605081;
+                            color: #605081;
+                            font-weight: bold;
                         }
                     }
                 }
@@ -323,7 +325,7 @@ header {
 
 footer {
     background-color: #FFF;
-    color: #224DBE;
+    color: #000;
     padding-top: 20px;
     padding-bottom: 20px;
     box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.5);
@@ -333,7 +335,7 @@ footer {
     a:hover,
     a:active {
         text-decoration: none;
-        color: #224DBE;
+        color: #000;
     }
 }
 
@@ -806,7 +808,7 @@ footer {
     }
 
     footer {
-        color: #224DBE;
+        color: #000;
         padding-top: 20px;
         padding-bottom: 20px;
     }
